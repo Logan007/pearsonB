@@ -1,3 +1,6 @@
+// This is free and unencumbered software released into the public domain.
+
+
 #include "pearsonb.h"
 
 
@@ -181,7 +184,7 @@ uint64_t pearson_hash_64 (const uint8_t *in, size_t len) {
     hash1 = ~hash1;
     hash_round(hash, org_len, 1);
 
-    // caller is responsible for storing it big endian to memory (if ever)
+    // caller is responsible for storing it the big endian way to memory (if ever)
     return hash1;
 }
 
@@ -198,6 +201,6 @@ uint16_t pearson_hash_16 (const uint8_t *in, size_t len) {
 }
 
 
-void pearson_hash_init(void) {
+void pearson_hash_init (void) {
 
 }
