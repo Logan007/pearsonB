@@ -27,7 +27,7 @@ Starting some research from my unsuccessful ideas about linear congruential gene
 > If ever considering 32-bit block size, Chris Wellons' [Hash Prospector](https://github.com/skeeto/hash-prospector) will be helpful. Chris found some very interesting permutation candidates as detailed in his [blog](https://nullprogram.com/blog/2018/07/31/). Credits to Chris for his work and especially for giving his findings to the public domain! His `triple32()` candidate seems very favorable candidate:
 >
 >```C
->#define permute32(in)  \
+>#define permute32(in) \
 >    in ^= in >> 17;    \
 >    in *= 0xed5ad4bb); \
 >    in ^= in >> 11;    \
@@ -47,7 +47,7 @@ At some point, we could mix the total string length into the hash (does not help
 
 ## Speed
 
-Compiled by `gcc -O3 -march=native pearsonb.c test.c`, the resulting executable `./a.out` shows the the following results of its speed measurement:
+Compiled by `gcc -O3 -march=native pearsonb.c test.c`, the resulting executable `./a.out` shows the following results of its speed measurement:
 
 (to be measured on different platforms)
 
