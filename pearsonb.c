@@ -14,7 +14,7 @@
 
 
 // David Stafford's Mix13 from http://zimbry.blogspot.com/2011/09/better-bit-mixing-improving-on.html
-// permission of the author still to be obtained
+// the author clarified via eMail that this of his work is released to the public domain
 #define permute64(in)         \
     in ^= (in >> 30);         \
     in *= 0xbf58476d1ce4e5b9; \
