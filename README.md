@@ -1,5 +1,3 @@
-# :warning: DRAFT :warning:
-
 # Pearson Block Hashing
 
 The relatively low speed seen with regular [Pearson Hashing](https://github.com/Logan007/pearson) on modern CPUs might originate from the fact that it only processes one byte of input at a time. So, this is an attempt to read and digest multiple bytes, a block of bytes, in order to speed things up. Still relying on the underlying Pearson Hasing scheme, I tenderly call it **Pearson B. Hashing**.
@@ -14,7 +12,7 @@ As a look-up table for numbers above 16-bit width definitely is out of reach, th
 
 ## Permutation
 
-Starting some research from my unsuccessful ideas about linear congruential generators I once tried with pure Pearson Hashing, I came across [Mix13](http://zimbry.blogspot.com/2011/09/better-bit-mixing-improving-on.html) as with constants discovered by David Stafford using simulation. Published on his blog in 2011, this function meanwhile gets widely used and is better known as part of `splitmix64()`. (!!! permission of the author still to be obtained !!!)
+Starting some research from my unsuccessful ideas about linear congruential generators I once tried with pure Pearson Hashing, I came across [Mix13](http://zimbry.blogspot.com/2011/09/better-bit-mixing-improving-on.html) as with constants discovered by David Stafford using simulation. Published on his blog in 2011, this function meanwhile gets widely used and is better known as part of `splitmix64()`. David clarified to me in a very kind eMail that this of his work is released to the public domain. David, thank you very much for sharing!
 
 ```C
 #define permute64(in)         \
@@ -26,7 +24,7 @@ Starting some research from my unsuccessful ideas about linear congruential gene
 ```
 
 :information_source: **NOTE**
-> If ever considering 32-bit block size, Chris Wellons' [Hash Prospector](https://github.com/skeeto/hash-prospector) will be helpful. Chris found some very interesting permutation candidates as detailed in his [blog](https://nullprogram.com/blog/2018/07/31/). Credits to Chris for his work and especially for sharing his findings with the public domain! His `triple32()` candidate seems very favorable candidate:
+> If ever considering 32-bit block size, Chris Wellons' [Hash Prospector](https://github.com/skeeto/hash-prospector) will be helpful. Chris found some very interesting permutation candidates as detailed in his [blog](https://nullprogram.com/blog/2018/07/31/). Credits to Chris for his work and especially for giving his findings to the public domain! His `triple32()` candidate seems very favorable candidate:
 >
 >```C
 >#define permute32(in)  \
