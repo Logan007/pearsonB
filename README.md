@@ -52,6 +52,7 @@ Compiled by `gcc -O3 -march=native pearsonb.c test.c`, the resulting executable 
 | plain C            | 32-bit hash | 64-bit hash | 128-bit hash | 256-bit hash |
 | :---               | ---:        | ---:        | ---:         | ---:         | 
 | i7 7500U           |1825.6 MB/s  |1866.9 MB/s  |1699.8 MB/s   |1476.0 MB/s   |
+| i7 5775C           |1955.3 MB/s  |1953.6 MB/s  |1698.2 MB/s   |1201.1 MB/s   |
 | i7 2860QM          |1630.6 MB/s  |1682.4 MB/s  |1367.9 MB/s   |1041.0 MB/s   |
 | i5 M430            |1051.6 MB/s  |1145.1 MB/s  | 943.3 MB/s   | 720.0 MB/s   | 
 | Cortex A53 RPi3B+  | 524.3 MB/s  | 525.3 MB/s  | 420.3 MB/s   | 284.3 MB/s   |    
