@@ -24,7 +24,7 @@ Starting some research from my unsuccessful ideas about linear congruential gene
 ```
 
 :information_source: **NOTE**
-> If ever considering 32-bit block size, Chris Wellons' [Hash Prospector](https://github.com/skeeto/hash-prospector) will be helpful. Chris found some very interesting permutation candidates as detailed in his [blog](https://nullprogram.com/blog/2018/07/31/). Credits to Chris for his work and especially for giving his findings to the public domain! His `triple32()` candidate seems very favorable candidate:
+> If ever considering 32-bit block size, Chris Wellons' [Hash Prospector](https://github.com/skeeto/hash-prospector) will be helpful. Chris found some very interesting permutation candidates as detailed in his [blog](https://nullprogram.com/blog/2018/07/31/). Credits to Chris for his work and especially for giving his findings to the public domain! His `triple32()` seems to be a very prospective candidate:
 >
 >```C
 >#define permute32(in) \
