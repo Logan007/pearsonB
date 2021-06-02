@@ -66,3 +66,5 @@ Based on earlier experience, I think that SSE might slow things down. But I will
 To handle streamed data in chunks just as they arrive, the hashing could be splitted into _updating_ the hash value with pieces of blockwidth-sized pieces of data, and _finalizing_, i.e. handling the excess bytes and total length.
 
 Please keep in mind that this is not a cryptographically secure hashing scheme. It however can safely be used as internal checksum, for mixing bits, or in case there no intention to make the hash value a _public proof of knowledge_ for some secret without presenting that secret itself.
+
+Pearson B. Hashing [passes](https://github.com/rurban/smhasher/commit/6eb697f628643fdfcaefbcf0a7d228f84eac80e1) [SMHasher](https://github.com/rurban/smhasher).
